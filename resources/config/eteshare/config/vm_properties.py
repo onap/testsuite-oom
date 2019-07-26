@@ -73,7 +73,7 @@ GLOBAL_INJECTED_KEYSTONE_REGION_THREE = '{{ .Values.openStackKeyStoneUrlRegionTh
 GLOBAL_INJECTED_OPENSTACK_KEYSTONE_API_VERSION_REGION_THREE = '{{ .Values.openStackKeystoneAPIVersionRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_USERNAME_REGION_THREE = '{{ .Values.openStackUserNameRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_PASSWORD_REGION_THREE = '{{ .Values.openStackPasswordRegionThree }}'
-GLOBAL_INJECTED_OPENSTACK_MSO_ENCRYPTED_PASSWORD_REGION_THREE  = '{{ .Values.openSackMsoEncryptdPasswordRegionThree }}'
+GLOBAL_INJECTED_OPENSTACK_SO_ENCRYPTED_PASSWORD_REGION_THREE  = '{{ .Values.openSackMsoEncryptdPasswordRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_SO_ENCRYPTED_PASSWORD = '{{ .Values.config.openStackSoEncryptedPassword}}'
 GLOBAL_INJECTED_OPENSTACK_TENANT_ID_REGION_THREE = '{{ .Values.openStackTenantIdRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_PROJECT_DOMAIN_REGION_THREE = '{{ .Values.openStackProjectNameRegionThree }}'
@@ -103,7 +103,7 @@ GLOBAL_INJECTED_SDC_IP_ADDR = 'N/A'
 GLOBAL_INJECTED_SDNC_IP_ADDR = 'sdnc.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SDNC_PORTAL_IP_ADDR = 'sdnc-portal.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_APIHAND_IP_ADDR = 'so.{{include "common.namespace" .}}'
-GLOBAL_INJECTED_SO_ASDCHAND_IP_ADDR = 'so-sdc-controller.{{include "common.namespace" .}}'
+GLOBAL_INJECTED_SO_SDCHAND_IP_ADDR = 'so-sdc-controller.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_BPMN_IP_ADDR = 'so-bpmn-infra.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_CATDB_IP_ADDR = 'so-catalog-db-adapter.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_IP_ADDR = 'so.{{include "common.namespace" .}}'
@@ -175,7 +175,7 @@ GLOBAL_INJECTED_PROPERTIES = {
     "GLOBAL_INJECTED_OPENSTACK_KEYSTONE_API_VERSION_REGION_THREE" : '{{ .Values.openStackKeystoneAPIVersionRegionThree }}',
     "GLOBAL_INJECTED_OPENSTACK_USERNAME_REGION_THREE" : '{{ .Values.openStackUserNameRegionThree }}',
     "GLOBAL_INJECTED_OPENSTACK_PASSWORD_REGION_THREE" : '{{ .Values.openStackPasswordRegionThree }}',
-    "GLOBAL_INJECTED_OPENSTACK_MSO_ENCRYPTED_PASSWORD_REGION_THREE" : '{{ .Values.openSackMsoEncryptdPasswordRegionThree }}',
+    "GLOBAL_INJECTED_OPENSTACK_SO_ENCRYPTED_PASSWORD_REGION_THREE" : '{{ .Values.openSackMsoEncryptdPasswordRegionThree }}',
     "GLOBAL_INJECTED_OPENSTACK_SO_ENCRYPTED_PASSWORD" :  '{{ .Values.config.openStackSoEncryptedPassword}}',
     "GLOBAL_INJECTED_OPENSTACK_TENANT_ID_REGION_THREE" : '{{ .Values.openStackTenantIdRegionThree }}',
     "GLOBAL_INJECTED_OPENSTACK_PROJECT_DOMAIN_REGION_THREE" : '{{ .Values.openStackProjectNameRegionThree }}',
@@ -205,7 +205,7 @@ GLOBAL_INJECTED_PROPERTIES = {
     "GLOBAL_INJECTED_SDNC_IP_ADDR" : 'sdnc.{{include "common.namespace" .}}',
     "GLOBAL_INJECTED_SDNC_PORTAL_IP_ADDR" : 'sdnc-portal.{{include "common.namespace" .}}',
     "GLOBAL_INJECTED_SO_APIHAND_IP_ADDR" : 'so.{{include "common.namespace" .}}',
-    "GLOBAL_INJECTED_SO_ASDCHAND_IP_ADDR" : 'so-sdc-controller.{{include "common.namespace" .}}',
+    "GLOBAL_INJECTED_SO_SDCHAND_IP_ADDR" : 'so-sdc-controller.{{include "common.namespace" .}}',
     "GLOBAL_INJECTED_SO_BPMN_IP_ADDR" : 'so-bpmn-infra.{{include "common.namespace" .}}',
     "GLOBAL_INJECTED_SO_CATDB_IP_ADDR" : 'so-catalog-db-adapter.{{include "common.namespace" .}}',
     "GLOBAL_INJECTED_SO_IP_ADDR" : 'so.{{include "common.namespace" .}}',
