@@ -16,16 +16,19 @@
 GLOBAL_AAF_SERVER = 'https://aaf-service.{{include "common.namespace" .}}:8100'
 GLOBAL_AAF_USERNAME = '{{ .Values.aafUsername }}'
 GLOBAL_AAF_PASSWORD = '{{ .Values.aafPassword }}'
+GLOBAL_AAF_AUTHENTICATION = [GLOBAL_AAF_USERNAME, GLOBAL_AAF_PASSWORD]
 # aai info - everything is from the private oam network (also called onap private network)
 GLOBAL_AAI_SERVER_PROTOCOL = "https"
 GLOBAL_AAI_SERVER_PORT = "8443"
 GLOBAL_AAI_USERNAME = '{{ .Values.aaiUsername }}'
 GLOBAL_AAI_PASSWORD = '{{ .Values.aaiPassword}}'
+GLOBAL_AAI_AUTHENTICATION = [GLOBAL_AAI_USERNAME, GLOBAL_AAI_PASSWORD]
 # appc info - everything is from the private oam network (also called onap private network)
 GLOBAL_APPC_SERVER_PROTOCOL = "https"
 GLOBAL_APPC_SERVER_PORT = "8443"
 GLOBAL_APPC_USERNAME = '{{ .Values.appcUsername }}'
 GLOBAL_APPC_PASSWORD = '{{ .Values.appcPassword }}'
+GLOBAL_APPC_AUTHENTICATION = [GLOBAL_APPC_USERNAME, GLOBAL_APPC_PASSWORD]
 GLOBAL_APPC_CDT_SERVER_PROTOCOL = "https"
 GLOBAL_APPC_CDT_SERVER_PORT = "18080"
 GLOBAL_APPC_CDT_USERNAME = "demo"
@@ -34,8 +37,9 @@ GLOBAL_ASDC_SERVER_PROTOCOL = "http"
 GLOBAL_ASDC_FE_PORT = "8181"
 GLOBAL_ASDC_BE_PORT = "8080"
 GLOBAL_ASDC_BE_ONBOARD_PORT = "8081"
-GLOBAL_ASDC_BE_USERNAME = "beep"
-GLOBAL_ASDC_BE_PASSWORD = "boop"
+GLOBAL_ASDC_USERNAME = "beep"
+GLOBAL_ASDC_PASSWORD = "boop"
+GLOBAL_ASDC_AUTHENTICATION = [GLOBAL_ASDC_USERNAME, GLOBAL_ASDC_PASSWORD]
 # clamp info - everything is from the private oam network (also called onap private network)
 GLOBAL_CLAMP_SERVER_PROTOCOL = "https"
 GLOBAL_CLAMP_SERVER_PORT = "8443"
@@ -50,6 +54,7 @@ GLOBAL_DCAE_SERVER_PROTOCOL = "http"
 GLOBAL_DCAE_HEALTH_SERVER_PORT = "80"
 GLOBAL_DCAE_USERNAME = '{{ .Values.dcaeUsername }}'
 GLOBAL_DCAE_PASSWORD = '{{ .Values.dcaePassword}}'
+GLOBAL_DCAE_AUTHENTICATION = [GLOBAL_DCAE_USERNAME, GLOBAL_DCAE_PASSWORD]
 # dcae hv-ves info
 GLOBAL_DCAE_HVVES_SERVER_NAME = 'dcae-hv-ves-collector.{{include "common.namespace" .}}'
 GLOBAL_DCAE_HVVES_SERVER_PORT = "6061"
