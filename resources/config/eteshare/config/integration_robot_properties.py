@@ -195,3 +195,6 @@ GLOBAL_DNS_TRAFFIC_DURATION = "600"
 # location where heat templates and data are loaded from
 GLOBAL_HEAT_TEMPLATES_FOLDER = "/var/opt/ONAP/demo/heat"
 GLOBAL_PRELOAD_DATA_FOLDER = "/var/opt/ONAP/demo/preload-data"
+# location where TOSCA artifacts are loaded from
+GLOBAL_TOSCA_ONBOARDING_PACKAGES_FOLDER = "/var/opt/ONAP/demo/tosca"
+
