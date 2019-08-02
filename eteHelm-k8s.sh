@@ -19,7 +19,7 @@
 # Please clean up logs when you are done...
 #
 if [ "$1" == "" ] ;  then
-   echo "Usage: eteHelm-k8s.sh [namespace]"
+   echo "Usage: eteHelm-k8s.sh [namespace] [execscript]"
    echo " list projects via helm list and runs health-check with those tags except dev and dev-consul"
    exit
 fi
@@ -38,8 +38,17 @@ do
 TAGS="$TAGS -i $project"
 done
 
+DIR=$(dirname "$0")
+SCRIPTDIR=scripts/helmscript
 
 ETEHOME=/var/opt/ONAP
+
+if [[ "${!#}" == "execscript" ]]; then
+   for script in $(ls -1 "$DIR/$SCRIPTDIR"); do
+      [ -f "$DIR/$SCRIPTDIR/$script" ] && [ -x "$DIR/$SCRIPTDIR/$script" ] && source "$DIR/$SCRIPTDIR/$script"
+   done
+fi
+
 export GLOBAL_BUILD_NUMBER=$(kubectl --namespace $NAMESPACE exec  ${POD}  -- bash -c "ls -1q /share/logs/ | wc -l")
 OUTPUT_FOLDER=$(printf %04d $GLOBAL_BUILD_NUMBER)_ete_helmlist
 DISPLAY_NUM=$(($GLOBAL_BUILD_NUMBER + 90))

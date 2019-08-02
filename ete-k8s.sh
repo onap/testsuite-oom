@@ -19,7 +19,7 @@
 # Please clean up logs when you are done...
 #
 if [ "$1" == "" ] || [ "$2" == "" ]; then
-   echo "Usage: ete-k8s.sh [namespace] [tag] [loadScript]"
+   echo "Usage: ete-k8s.sh [namespace] [tag] [execscript]"
    echo ""
    echo "  List of test case tags (filename for intent: tag)"
    echo ""
@@ -65,16 +65,16 @@ POD=$(kubectl --namespace $NAMESPACE get pods | sed 's/ .*//'| grep robot)
 TAGS="-i $2"
 
 DIR=$(dirname "$0")
-ETESCRIPTDIR=etescripts
-ETESCRIPTEXEC=${3:-}
+SCRIPTDIR=scripts/etescript
 
-if [[ "$2" == "ete" ]] && [[ "$ETESCRIPTEXEC" == "loadScript" ]]; then
-   for script in $(ls -1 "$DIR/$ETESCRIPTDIR"); do
-      [ -f "$DIR/$ETESCRIPTDIR/$script" ] && [ -x "$DIR/$ETESCRIPTDIR/$script" ] && "$DIR/$ETESCRIPTDIR/$script"
+ETEHOME=/var/opt/ONAP
+
+if [[ "${!#}" == "execscript" ]]; then
+   for script in $(ls -1 "$DIR/$SCRIPTDIR"); do
+      [ -f "$DIR/$SCRIPTDIR/$script" ] && [ -x "$DIR/$SCRIPTDIR/$script" ] && source "$DIR/$SCRIPTDIR/$script"
    done
 fi
 
-ETEHOME=/var/opt/ONAP
 export GLOBAL_BUILD_NUMBER=$(kubectl --namespace $NAMESPACE exec  ${POD}  -- bash -c "ls -1q /share/logs/ | wc -l")
 OUTPUT_FOLDER=$(printf %04d $GLOBAL_BUILD_NUMBER)_ete_$2
 DISPLAY_NUM=$(($GLOBAL_BUILD_NUMBER + 90))
