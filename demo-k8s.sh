@@ -18,7 +18,7 @@
 #
 function usage
 {
-	echo "Usage: demo-k8s.sh <namespace> <command> [<parameters>]"
+	echo "Usage: demo-k8s.sh <namespace> <command> [<parameters>] [execscript]"
 	echo " "
 	echo "       demo-k8s.sh <namespace> init"
 	echo "               - Execute both init_customer + distribute"
@@ -52,10 +52,20 @@ function usage
 	echo "               - Run heatbridge against the stack for the given service instance and service"
 	echo " "
 	echo "       demo-k8s.sh <namespace> vfwclosedloop <pgn-ip-address>"
-        echo "           - vFWCL: Sets the packet generator to high and low rates, and checks whether the policy "
-        echo "             kicks in to modulate the rates back to medium"
+        echo "               - vFWCL: Sets the packet generator to high and low rates, and checks whether the policy "
+        echo "                 kicks in to modulate the rates back to medium"
+	echo " "
+	echo "       demo-k8s.sh <namespace> <command> [<parameters>] execscript
+	echo "               - Optional parameter to execute user custom scripts located in scripts/demoscript directory"
 	echo " "
 }
+
+# Check if execscript flag is used and drop it from input arguments
+
+if [[ "${!#}" == "execscript" ]]; then
+        set -- "${@:1:$#-1}"
+        execscript=true
+fi
 
 # Set the defaults
 
@@ -212,7 +222,16 @@ set -x
 
 POD=$(kubectl --namespace $NAMESPACE get pods | sed 's/ .*//'| grep robot)
 
+DIR=$(dirname "$0")
+SCRIPTDIR=scripts/demoscript
+
 ETEHOME=/var/opt/ONAP
+
+if [ $execscript ]; then
+   for script in $(ls -1 "$DIR/$SCRIPTDIR"); do
+      [ -f "$DIR/$SCRIPTDIR/$script" ] && [ -x "$DIR/$SCRIPTDIR/$script" ] && source "$DIR/$SCRIPTDIR/$script"
+   done
+fi
 
 export GLOBAL_BUILD_NUMBER=$(kubectl --namespace $NAMESPACE exec  ${POD}  -- bash -c "ls -1q /share/logs/ | wc -l")
 OUTPUT_FOLDER=$(printf %04d $GLOBAL_BUILD_NUMBER)_demo_$key

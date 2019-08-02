@@ -19,7 +19,7 @@
 # Please clean up logs when you are done...
 #
 if [ "$1" == "" ] || [ "$2" == "" ]; then
-   echo "Usage: ete-k8s.sh [namespace] [tag] [loadScript]"
+   echo "Usage: ete-k8s.sh [namespace] [tag] [execscript]"
    echo ""
    echo "  List of test case tags (filename for intent: tag)"
    echo ""
@@ -36,23 +36,25 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
    echo "                      health-so, health-uui, health-vfc, health-vid, health-vnfsdk, healthdist, healthlogin, healthmr,"
    echo "                      healthportalapp, multicloud, oom"
    echo ""
-   echo " hvves.robot: HVVES, ete"
+   echo "  hvves.robot: HVVES, ete"
    echo ""
-   echo " model-distribution-vcpe.robot: distributevCPEResCust"
+   echo "  model-distribution-vcpe.robot: distributevCPEResCust"
    echo ""
-   echo " model-distribution.robot: distribute, distributeVFWDT, distributeVLB"
+   echo "  model-distribution.robot: distribute, distributeVFWDT, distributeVLB"
    echo ""
-   echo " oof-*.robot: cmso, has, homing"
+   echo "  oof-*.robot: cmso, has, homing"
    echo ""
-   echo " pnf-registration.robot: ete, pnf_registrate"
+   echo "  pnf-registration.robot: ete, pnf_registrate"
    echo ""
-   echo " post-install-tests.robot dmaapacl, postinstall"
+   echo "  post-install-tests.robot dmaapacl, postinstall"
    echo ""
-   echo " update_onap_page.robot: UpdateWebPage"
+   echo "  update_onap_page.robot: UpdateWebPage"
    echo ""
-   echo " vnf-orchestration-direct-so.robot: instantiateVFWdirectso"
+   echo "  vnf-orchestration-direct-so.robot: instantiateVFWdirectso"
    echo ""
-   echo " vnf-orchestration.robot: instantiate, instantiateNoDelete, stability72hr"
+   echo "  vnf-orchestration.robot: instantiate, instantiateNoDelete, stability72hr"
+   echo ""
+   echo "  [execscript] - optional parameter to execute user custom scripts located in scripts/etescript directory"
    exit
 fi
 
@@ -65,16 +67,16 @@ POD=$(kubectl --namespace $NAMESPACE get pods | sed 's/ .*//'| grep robot)
 TAGS="-i $2"
 
 DIR=$(dirname "$0")
-ETESCRIPTDIR=etescripts
-ETESCRIPTEXEC=${3:-}
+SCRIPTDIR=scripts/etescript
 
-if [[ "$2" == "ete" ]] && [[ "$ETESCRIPTEXEC" == "loadScript" ]]; then
-   for script in $(ls -1 "$DIR/$ETESCRIPTDIR"); do
-      [ -f "$DIR/$ETESCRIPTDIR/$script" ] && [ -x "$DIR/$ETESCRIPTDIR/$script" ] && "$DIR/$ETESCRIPTDIR/$script"
+ETEHOME=/var/opt/ONAP
+
+if [[ "${!#}" == "execscript" ]]; then
+   for script in $(ls -1 "$DIR/$SCRIPTDIR"); do
+      [ -f "$DIR/$SCRIPTDIR/$script" ] && [ -x "$DIR/$SCRIPTDIR/$script" ] && source "$DIR/$SCRIPTDIR/$script"
    done
 fi
 
-ETEHOME=/var/opt/ONAP
 export GLOBAL_BUILD_NUMBER=$(kubectl --namespace $NAMESPACE exec  ${POD}  -- bash -c "ls -1q /share/logs/ | wc -l")
 OUTPUT_FOLDER=$(printf %04d $GLOBAL_BUILD_NUMBER)_ete_$2
 DISPLAY_NUM=$(($GLOBAL_BUILD_NUMBER + 90))
