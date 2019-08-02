@@ -68,13 +68,14 @@ DIR=$(dirname "$0")
 ETESCRIPTDIR=etescripts
 ETESCRIPTEXEC=${3:-}
 
+ETEHOME=/var/opt/ONAP
+
 if [[ "$2" == "ete" ]] && [[ "$ETESCRIPTEXEC" == "loadScript" ]]; then
    for script in $(ls -1 "$DIR/$ETESCRIPTDIR"); do
-      [ -f "$DIR/$ETESCRIPTDIR/$script" ] && [ -x "$DIR/$ETESCRIPTDIR/$script" ] && "$DIR/$ETESCRIPTDIR/$script"
+      [ -f "$DIR/$ETESCRIPTDIR/$script" ] && [ -x "$DIR/$ETESCRIPTDIR/$script" ] && source "$DIR/$ETESCRIPTDIR/$script"
    done
 fi
 
-ETEHOME=/var/opt/ONAP
 export GLOBAL_BUILD_NUMBER=$(kubectl --namespace $NAMESPACE exec  ${POD}  -- bash -c "ls -1q /share/logs/ | wc -l")
 OUTPUT_FOLDER=$(printf %04d $GLOBAL_BUILD_NUMBER)_ete_$2
 DISPLAY_NUM=$(($GLOBAL_BUILD_NUMBER + 90))
