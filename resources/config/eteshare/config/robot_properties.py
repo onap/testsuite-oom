@@ -179,6 +179,7 @@ GLOBAL_DMAAP_KAFKA_JAAS_PASSWORD = '{{ .Values.kafkaJaasPassword }}'
 GLOBAL_DROOLS_SERVER_PORT = "9696"
 GLOBAL_DROOLS_USERNAME = '{{ .Values.droolsUsername }}'
 GLOBAL_DROOLS_PASSWORD = '{{ .Values.droolsPassword }}'
+GLOBAL_DROOLS_AUTHENTICATION = [GLOBAL_DROOLS_USERNAME, GLOBAL_DROOLS_PASSWORD]
 # log server config - NOTE: no log server is run in HEAT; only on OOM
 GLOBAL_LOG_SERVER_PROTOCOL = "http"
 GLOBAL_LOG_ELASTICSEARCH_PORT = "9200"
@@ -268,12 +269,13 @@ GLOBAL_PORTAL_SERVER_PROTOCOL = "http"
 GLOBAL_PORTAL_SERVER_PORT = "8989"
 GLOBAL_PORTAL_USERNAME = '{{ .Values.portalUsername }}'
 GLOBAL_PORTAL_PASSWORD = '{{ .Values.portalPassword }}'
-# sdngc info - everything is from the private oam network (also called onap private network)
-GLOBAL_SDNGC_SERVER_PROTOCOL = "http"
-GLOBAL_SDNGC_REST_PORT = "8282"
-GLOBAL_SDNGC_ADMIN_PORT = "8843"
-GLOBAL_SDNGC_USERNAME = '{{ .Values.sdncUsername }}'
-GLOBAL_SDNGC_PASSWORD = '{{ .Values.sdncPassword }}'
+# sdnc info - everything is from the private oam network (also called onap private network)
+GLOBAL_SDNC_SERVER_PROTOCOL = "http"
+GLOBAL_SDNC_REST_PORT = "8282"
+GLOBAL_SDNC_ADMIN_PORT = "8843"
+GLOBAL_SDNC_USERNAME = '{{ .Values.sdncUsername }}'
+GLOBAL_SDNC_PASSWORD = '{{ .Values.sdncPassword }}'
+GLOBAL_SDNC_AUTHENTICATION = [GLOBAL_SDNC_USERNAME, GLOBAL_SDNC_PASSWORD]
 # sms (AAF)  info
 GLOBAL_SMS_SERVER_PROTOCOL = "https"
 GLOBAL_SMS_SERVER_NAME = 'aaf-sms.{{include "common.namespace" .}}'
