@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "62312990_38cfff6e",
+        "filename": "demo-k8s.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2019-08-05T14:11:04Z",
+      "side": 1,
+      "message": "need a description of execscript in the usage and mayb add something to README.md to explain why we would add things to demo execscript vs ete execscript",
+      "range": {
+        "startLine": 21,
+        "startChar": 63,
+        "endLine": 21,
+        "endChar": 75
+      },
+      "revId": "1b0217ccc7593f86f507826c8e47230fa6464704",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
