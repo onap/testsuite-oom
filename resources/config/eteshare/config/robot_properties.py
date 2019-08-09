@@ -116,6 +116,7 @@ GLOBAL_INJECTED_VM_IMAGE_NAME = '{{ .Values.ubuntu14Image }}'
 GLOBAL_INJECTED_VID_IP_ADDR = 'vid.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_VM_FLAVOR = '{{ .Values.openStackFlavourMedium }}'
 GLOBAL_INJECTED_VNFSDK_IP_ADDR = 'refrepo.{{include "common.namespace" .}}'
+GLOBAL_INJECTED_CCSDK_CDS_BLUEPRINT_PROCESSOR_IP_ADDR = 'cds-blueprints-processor-http.{{include "common.namespace" .}}'
 
 # aaf info - everything is from the private oam network (also called onap private network)
 GLOBAL_AAF_SERVER = 'https://aaf-service.{{include "common.namespace" .}}:8100'
@@ -305,4 +306,12 @@ GLOBAL_HEAT_TEMPLATES_FOLDER = "/var/opt/ONAP/demo/heat"
 GLOBAL_PRELOAD_DATA_FOLDER = "/var/opt/ONAP/demo/preload-data"
 # location where TOSCA artifacts are loaded from
 GLOBAL_TOSCA_ONBOARDING_PACKAGES_FOLDER = "/var/opt/ONAP/demo/tosca"
+
+
+# cds info - everything is from the private oam network (also called onap private network)
+GLOBAL_CCSDK_CDS_SERVER_PROTOCOL = "http"
+GLOBAL_CCSDK_CDS_HEALTH_SERVER_PORT = "8080"
+GLOBAL_CCSDK_CDS_USERNAME = 'ccsdkapps'
+GLOBAL_CCSDK_CDS_PASSWORD = 'ccsdkapps'
+GLOBAL_CCSDK_CDS_AUTHENTICATION = [GLOBAL_CDS_USERNAME, GLOBAL_CDS_PASSWORD]
 
