@@ -26,6 +26,9 @@ image: onap/testsuite:1.5.0-STAGING-latest
 pullPolicy: Always
 
 ubuntuInitImage: oomk8s/ubuntu-init:2.0.0
+lighthttpdImage: sebp/lighttpd:1.4.54-r0
+gitInitImage: openweb/git-sync
+debugImage: ubuntu:16.04
 
 # flag to enable debugging - application support required
 debugEnabled: false
@@ -46,6 +49,9 @@ demoArtifactsVersion: "1.4.0"
 demoArtifactsRepoUrl: "https://nexus.onap.org/content/repositories/releases"
 # Openstack medium sized flavour name.  Maps GLOBAL_INJECTED_VM_FLAVOR
 openStackFlavourMedium: "m1.medium"
+
+# VNF Asset Location - git repo with assets
+vnfAssetLocation: https://gerrit.onap.org/r/demo.git
 
 #################  Openstack .RC Parameters ################################333
 # KEYSTONE Version 3  Required for Rocky and beyond
