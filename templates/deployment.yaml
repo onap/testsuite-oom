@@ -31,11 +31,9 @@ spec:
         release: {{ .Release.Name }}
     spec:
       containers:
-      - name: {{ include "common.name" . }}
+      - name: {{ include "common.name" . }}-robot
         image: "{{ include "common.repository" . }}/{{ .Values.image }}"
         imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
-        ports:
-        - containerPort: {{ .Values.service.internalPort }}
         {{ if .Values.liveness.enabled }}
         livenessProbe:
           tcpSocket:
@@ -58,8 +56,82 @@ spec:
           mountPath: /share/config
         - name: robot-logs
           mountPath: /share/logs
+        - name: vnf-assets
+          mountPath: /share/assets
         resources:
 {{ include "common.resources" . }}
+      - name: {{ include "common.name" . }}-web
+        image: "{{ .Values.lighthttpdImage }}"
+        imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        {{ if .Values.liveness.enabled }}
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.liveness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.liveness.periodSeconds }}
+        {{ end }}
+        readinessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.readiness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.readiness.periodSeconds }}
+        volumeMounts:
+        - name: localtime
+          mountPath: /etc/localtime
+          readOnly: true
+        - name: robot-eteshare
+          mountPath: /var/www/localhost/htdocs/robot_properties.py
+          subPath: robot_properties.py
+        - name: robot-lighttpd-index
+          mountPath: /var/www/localhost/htdocs/index.html
+          subPath: index.html
+        - name: robot-logs
+          mountPath: /share/logs
+        - name: robot-lighttpd-config
+          mountPath: /etc/lighttpd/
+        resources:
+{{ include "common.resources" . }}
+      - name: {{ include "common.name" . }}-debug
+        image: "{{ .Values.debugImage }}"
+        imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        {{ if .Values.liveness.enabled }}
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.liveness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.liveness.periodSeconds }}
+        {{ end }}
+        readinessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.readiness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.readiness.periodSeconds }}
+        volumeMounts:
+        - name: robot-logs
+          mountPath: /share/logs
+        resources:
+{{ include "common.resources" . }}
+      initContainers:
+        - name: git-sync
+          image: {{ .Values.gitInitImage }}
+          volumeMounts:
+            - mountPath: /git/tmp
+              name: vnf-assets
+          env:
+            - name: GIT_SYNC_REPO
+              value: "{{ .Values.vnfAssetLocation }}"
+            - name: GIT_SYNC_ONE_TIME
+              value: "true"
+            - name: GIT_SYNC_REF
+              value: "{{ .Values.demoArtifactsVersion }}"
+            - name: GIT_SYNC_ROOT
+              value: "/git/tmp"
+          securityContext:
+            runAsUser: 0
       {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}
@@ -86,5 +158,15 @@ spec:
         configMap:
           name: {{ include "common.fullname" . }}-eteshare-configmap
           defaultMode: 0755
+      - name: robot-lighttpd-config
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-configmap
+          defaultMode: 0755
+      - name: robot-lighttpd-index
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-index-configmap
+          defaultMode: 0755
+      - name: vnf-assets
+        emptyDir: {}
       imagePullSecrets:
       - name: "{{ include "common.namespace" . }}-docker-registry-key"
