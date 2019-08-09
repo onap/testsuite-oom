@@ -34,8 +34,6 @@ spec:
       - name: {{ include "common.name" . }}
         image: "{{ include "common.repository" . }}/{{ .Values.image }}"
         imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
-        ports:
-        - containerPort: {{ .Values.service.internalPort }}
         {{ if .Values.liveness.enabled }}
         livenessProbe:
           tcpSocket:
@@ -58,6 +56,38 @@ spec:
           mountPath: /share/config
         - name: robot-logs
           mountPath: /share/logs
+        resources:
+      - name: {{ include "common.name" . }}-web
+        image: "{{ .Values.lighthttpdImage }}"
+        imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.service.internalPort }}
+        {{ if .Values.liveness.enabled }}
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.liveness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.liveness.periodSeconds }}
+        {{ end }}
+        readinessProbe:
+          tcpSocket:
+            port: {{ .Values.service.internalPort }}
+          initialDelaySeconds: {{ .Values.readiness.initialDelaySeconds }}
+          periodSeconds: {{ .Values.readiness.periodSeconds }}
+        volumeMounts:
+        - name: localtime
+          mountPath: /etc/localtime
+          readOnly: true
+        - name: robot-eteshare
+          mountPath: /var/www/localhost/htdocs/robot_properties.py
+          subPath: robot_properties.py
+        - name: robot-lighttpd-index
+          mountPath: /var/www/localhost/htdocs/index.html
+          subPath: index.html
+        - name: robot-logs
+          mountPath: /share/logs
+        - name: robot-lighttpd-config
+          mountPath: /etc/lighttpd/
         resources:
 {{ include "common.resources" . }}
       {{- if .Values.nodeSelector }}
@@ -85,6 +115,14 @@ spec:
       - name: robot-eteshare
         configMap:
           name: {{ include "common.fullname" . }}-eteshare-configmap
+          defaultMode: 0755
+      - name: robot-lighttpd-config
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-configmap
+          defaultMode: 0755
+      - name: robot-lighttpd-index
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-index-configmap
           defaultMode: 0755
       imagePullSecrets:
       - name: "{{ include "common.namespace" . }}-docker-registry-key"
