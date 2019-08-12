@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "dc74aa12_e5c9e3c1",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 5299
+      },
+      "writtenOn": "2019-08-12T12:09:50Z",
+      "side": 1,
+      "message": "Could this be an issue if user overrides username/pass for CDS?",
+      "range": {
+        "startLine": 314,
+        "startChar": 29,
+        "endLine": 314,
+        "endChar": 38
+      },
+      "revId": "e4e79763e2bd0bcbda51d9ee058e7a89df65ab7b",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
