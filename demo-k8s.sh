@@ -55,7 +55,7 @@ function usage
         echo "               - vFWCL: Sets the packet generator to high and low rates, and checks whether the policy "
         echo "                 kicks in to modulate the rates back to medium"
 	echo " "
-	echo "       demo-k8s.sh <namespace> <command> [<parameters>] execscript
+	echo "       demo-k8s.sh <namespace> <command> [<parameters>] execscript"
 	echo "               - Optional parameter to execute user custom scripts located in scripts/demoscript directory"
 	echo " "
 }
