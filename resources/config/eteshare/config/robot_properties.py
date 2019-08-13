@@ -315,3 +315,14 @@ GLOBAL_CCSDK_CDS_USERNAME = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_PASSWORD = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_AUTHENTICATION = [GLOBAL_CDS_USERNAME, GLOBAL_CDS_PASSWORD]
 
+# vLB_CDS use cast info - used for robot instantiation
+VLB_INJECTED_REGION = '{{ .Values.openStackRegion }}'
+VLB_INJECTED_OPENSTACK_TENANT_ID = '{{ .Values.openStackTenantId }}'
+VLB_INJECTED_PRIVATE_NET_ID = '{{ .Values.openStackPrivateNetId }}'
+VLB_INJECTED_OPENSTACK_PRIVATE_SUBNET_ID = '{{ .Values.openStackPrivateSubnetId }}'
+VLB_INJECTED_PUBLIC_KEY = "{{ .Values.vnfPubKey }}"  
+VLB_INJECTED_UBUNTU_1604_IMAGE = '{{ .Values.ubuntu16Image }}'
+VLB_INJECTED_VM_FLAVOR = '{{ .Values.openStackFlavourMedium }}'
+VLB_INJECTED_OPENSTACK_SECURITY_GROUP = '{{ .Values.openStackSecurityGroup }}'
+VLB_INJECTED_SCRIPT_VERSION = '{{ .Values.scriptVersion }}'
+VLB_INJECTED_PUBLIC_NET_ID = '{{ .Values.openStackPublicNetId }}'
