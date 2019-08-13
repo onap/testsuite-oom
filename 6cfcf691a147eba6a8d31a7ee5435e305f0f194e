@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "93d04d07_8073e17a",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 318,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2019-08-13T18:10:34Z",
+      "side": 1,
+      "message": "all of these properties exist arleady, why are you adding them under a different name?",
+      "revId": "6cfcf691a147eba6a8d31a7ee5435e305f0f194e",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
