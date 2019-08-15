@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "11789c04_8ece60fc",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2019-08-15T14:10:24Z",
+      "side": 1,
+      "message": "this needs to be changed to add CCSDK in the list",
+      "revId": "0607ec18c1cf7c598865880d5f96c950f651bc72",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
