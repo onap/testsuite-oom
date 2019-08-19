@@ -104,7 +104,6 @@ GLOBAL_INJECTED_SO_APIHAND_IP_ADDR = 'so.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_SDCHAND_IP_ADDR = 'so-sdc-controller.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_BPMN_IP_ADDR = 'so-bpmn-infra.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_CATDB_IP_ADDR = 'so-catalog-db-adapter.{{include "common.namespace" .}}'
-GLOBAL_INJECTED_SO_IP_ADDR = 'so.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_OPENSTACK_IP_ADDR = 'so-openstack-adapter.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_REQDB_IP_ADDR = 'so-request-db-adapter.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_SO_SDNC_IP_ADDR = 'so-sdnc-adapter.{{include "common.namespace" .}}'
@@ -212,10 +211,7 @@ GLOBAL_MR_SERVER_PORT = "3904"
 GLOBAL_BC_HTTPS_SERVER_PORT = "8443"
 GLOBAL_BC_USERNAME = '{{ .Values.bcUsername }}'
 GLOBAL_BC_PASSWORD = '{{ .Values.bcPassword }}'
-# so info - everything is from the private oam network (also called onap private network)
-GLOBAL_SO_SERVER_PROTOCOL = "http"
-GLOBAL_SO_SERVER_PORT = "8080"
-# SO containers
+# SO containers - everything is from the private oam network (also called onap private network)
 GLOBAL_SO_APIHAND_SERVER_PORT = "8080"
 GLOBAL_SO_SDCHAND_SERVER_PORT = "8085"
 GLOBAL_SO_BPMN_SERVER_PORT = "8081"
@@ -227,8 +223,18 @@ GLOBAL_SO_VFC_SERVER_PORT = "8084"
 GLOBAL_SO_VNFM_SERVER_PORT = "9092"
 GLOBAL_SO_USERNAME = '{{ .Values.soUsername }}'
 GLOBAL_SO_CATDB_USERNAME = '{{ .Values.soCatdbUsername }}'
-GLOBAL_SO_PASSWORD = '{{ .Values.soPassword }}'
 # robot uses SO_PASSWORD for both SO and CATDB
+GLOBAL_SO_PASSWORD = '{{ .Values.soPassword }}'
+GLOBAL_SO_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_APIHAND_IP_ADDR + ':' + GLOBAL_SO_APIHAND_SERVER_PORT
+GLOBAL_SO_APIHAND_ENDPOINT = GLOBAL_SO_ENDPOINT
+GLOBAL_SO_SDCHAND_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_SDCHAND_IP_ADDR + ':' + GLOBAL_SO_SDCHAND_SERVER_PORT
+GLOBAL_SO_BPMN_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_BPMN_IP_ADDR + ':' + GLOBAL_SO_BPMN_SERVER_PORT
+GLOBAL_SO_CATDB_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_CATDB_IP_ADDR + ':' + GLOBAL_SO_CATDB_SERVER_PORT
+GLOBAL_SO_OPENSTACK_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_OPENSTACK_IP_ADDR + ':' + GLOBAL_SO_OPENSTACK_SERVER_PORT
+GLOBAL_SO_REQDB_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_REQDB_IP_ADDR + ':' + GLOBAL_SO_REQDB_SERVER_PORT
+GLOBAL_SO_SDNC_ENDPOINT =  'http://' + GLOBAL_INJECTED_SO_SDNC_IP_ADDR + ':' + GLOBAL_SO_SDNC_SERVER_PORT
+GLOBAL_SO_VFC_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_VFC_IP_ADDR + ':' + GLOBAL_SO_VFC_SERVER_PORT
+GLOBAL_SO_VNFM_ENDPOINT = 'https://' + GLOBAL_INJECTED_SO_VNFM_IP_ADDR + ':' + GLOBAL_SO_VNFM_SERVER_PORT
 # music info - everything is from the private oam network (also called onap private network)
 GLOBAL_MUSIC_SERVER_PROTOCOL = "http"
 GLOBAL_MUSIC_SERVER_PORT = "8080"
