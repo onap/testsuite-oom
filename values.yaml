@@ -81,8 +81,6 @@ openStackUserDomain:  "Default"
 # UUID of the Openstack network that can assign floating ips.  Maps to GLOBAL_INJECTED_PUBLIC_NET_ID
 openStackPublicNetId: "e8f51958045716781ffc"
 openStackPublicNetworkName: "public"
-# password for Openstack tenant where VNFs will be spawned.  Maps to GLOBAL_INJECTED_OPENSTACK_PASSWORD
-openStackPassword: "tenantPassword"
 # Openstack region.  Maps to GLOBAL_INJECTED_REGION
 openStackRegion: "RegionOne"
 
@@ -92,7 +90,6 @@ openStackRegionRegionThree: "RegionThree"
 openStackKeyStoneUrlRegionThree: "http://1.2.3.4:5000"
 openStackKeystoneAPIVersionRegionThree: "v3"
 openStackUserNameRegionThree: "demo"
-openStackPasswordRegionThree: "tenantPassword"
 # this is the java encrypted password that is needed for SO
 openSackMsoEncryptdPasswordRegionThree: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 openStackTenantIdRegionThree: "3583253e932845a09cd4c8ca2f31d095"
