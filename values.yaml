@@ -263,7 +263,7 @@ persistence:
   ##   GKE, AWS & OpenStack)
   ##
   # storageClass: "-"
-  accessMode: ReadWriteMany
+  accessMode: ReadWriteOnce
   size: 2Gi
   mountPath: /dockerdata-nfs
   mountSubPath: robot/logs
