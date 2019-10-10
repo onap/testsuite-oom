@@ -26,6 +26,9 @@ function usage
 	echo "       demo-k8s.sh <namespace> init_customer"
 	echo "               - Create demo customer (Demonstration) and services, etc."
 	echo " "
+	echo "       demo-k8s.sh <namespace> init_cnf"
+	echo "               - Create demo customer (CNF_Demonstration) and services, etc. for CNF use cases"
+	echo " "
 	echo "       demo-k8s.sh <namespace> distribute  [<prefix>]"
 	echo "               - Distribute demo models (demoVFW and demoVLB)"
 	echo " "
@@ -112,6 +115,10 @@ do
 			TAG="InitDemo"
 			shift
 			;;
+        init_cnf)
+            TAG="InitCNFDemo"
+            shift
+            ;;
     	init_customer)
 			TAG="InitCustomer"
 			shift
