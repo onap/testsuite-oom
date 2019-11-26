@@ -200,8 +200,8 @@ GLOBAL_POMBA_ELASTICSEARCH_PORT = "9200"
 GLOBAL_POMBA_CONTEXTAGGREGATOR_PORT = "9529"
 
 # microservice bus info - everything is from the private oam network (also called onap private network)
-GLOBAL_MSB_SERVER_PROTOCOL = "http"
-GLOBAL_MSB_SERVER_PORT = "80"
+GLOBAL_MSB_SERVER_PROTOCOL = "https"
+GLOBAL_MSB_SERVER_PORT = "443"
 # message router info - everything is from the private oam network (also called onap private network)
 GLOBAL_MR_SERVER_PROTOCOL = "http"
 GLOBAL_MR_SERVER_PORT = "3904"
