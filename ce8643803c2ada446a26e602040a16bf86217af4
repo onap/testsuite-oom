@@ -16,6 +16,58 @@
       "revId": "ce8643803c2ada446a26e602040a16bf86217af4",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9ab62157_2b8e4118",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 210,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2019-11-27T14:49:12Z",
+      "side": 1,
+      "message": "theres no need to say HTTP unless theres more than 1 protocol",
+      "parentUuid": "3ca0d5d2_b0f34b4e",
+      "revId": "ce8643803c2ada446a26e602040a16bf86217af4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b408c0c9_c9f706bb",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 217,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2019-11-27T14:49:12Z",
+      "side": 1,
+      "message": "theres no need to say HTTP unless theres more than 1 protocol",
+      "revId": "ce8643803c2ada446a26e602040a16bf86217af4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3bdaa7cc_2b14fd99",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 220,
+      "author": {
+        "id": 37
+      },
+      "writtenOn": "2019-11-27T14:49:12Z",
+      "side": 1,
+      "message": "theres no need to say HTTPS unless theres more than 1 protocol",
+      "revId": "ce8643803c2ada446a26e602040a16bf86217af4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
