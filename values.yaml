@@ -124,6 +124,9 @@ vnfPubKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDKXDgoo3+WOqcUG8/5uUbk81+yczgw
 vnfPrivateKey: "onap_dev.yaml"
 # Override with DCAE VES Collector external IP
 dcaeCollectorIp: "FILL_IN_WITH_DCAE_VES_COLLECTOR_IP"
+# kubernetes external IP for Portal GUI tests
+kubernetesExternalIp: "10.0.0.14"
+
 
 # Credentials for ONAP Component
 # AAF

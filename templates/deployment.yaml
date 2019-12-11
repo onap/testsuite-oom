@@ -30,6 +30,18 @@ spec:
         app: {{ include "common.name" . }}
         release: {{ .Release.Name }}
     spec:
+      hostAliases:
+      - ip: {{ .Values.kubernetesExternalIp }}
+        hostnames:
+        - "portal.api.simpledemo.onap.org"
+        - "vid.api.simpledemo.onap.org"
+        - "sdc.api.fe.simpledemo.onap.org"
+        - "portal-sdk.simpledemo.onap.org"
+        - "policy.api.simpledemo.onap.org"
+        - "aai.api.sparky.simpledemo.onap.org"
+        - "aai.ui.simpledemo.onap.org"
+        - "cli.api.simpledemo.onap.org"
+        - "so-monitoring"
       containers:
       - name: {{ include "common.name" . }}
         image: "{{ include "common.repository" . }}/{{ .Values.image }}"
