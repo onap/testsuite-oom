@@ -112,6 +112,10 @@ do
 			TAG="InitDemo"
 			shift
 			;;
+        distribute_vcpe)
+			TAG="distributeVCPE"
+			shift
+			;;
     	init_customer)
 			TAG="InitCustomer"
 			shift
