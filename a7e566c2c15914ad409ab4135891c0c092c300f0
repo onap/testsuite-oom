@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "61693c3e_f297a730",
+        "filename": "values.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 1215
+      },
+      "writtenOn": "2019-12-12T07:41:03Z",
+      "side": 1,
+      "message": "shall it be hardcoded here?\nyou need to know the machine in order to resolve the different fqdn addresses as defined in the host. A FILL_IN_WITH_KUBERNETES_PUBLIC_IP would be more portable, no?",
+      "revId": "a7e566c2c15914ad409ab4135891c0c092c300f0",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
