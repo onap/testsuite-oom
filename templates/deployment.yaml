@@ -55,9 +55,11 @@ spec:
         - name: robot-eteshare
           mountPath: /share/config
         - name: robot-logs
-          mountPath: /share/logs
+          mountPath: /opt/robotframework/results
         - name: vnf-assets
           mountPath: /share/assets
+        - name: test-assets
+          mountPath: /opt/robotframework/tests
         resources:
 {{ include "common.resources" . }}
       - name: {{ include "common.name" . }}-web
@@ -119,7 +121,7 @@ spec:
         resources:
 {{ include "common.resources" . }}
       initContainers:
-        - name: git-sync
+        - name: demo-git-sync
           image: {{ .Values.gitInitImage }}
           volumeMounts:
             - mountPath: /git/tmp
@@ -131,6 +133,22 @@ spec:
               value: "true"
             - name: GIT_SYNC_REF
               value: "{{ .Values.demoArtifactsVersion }}"
+            - name: GIT_SYNC_ROOT
+              value: "/git/tmp"
+          securityContext:
+            runAsUser: 0
+        - name: testsuite-git-sync
+          image: {{ .Values.gitInitImage }}
+          volumeMounts:
+            - mountPath: /git/tmp
+              name: test-assets
+          env:
+            - name: GIT_SYNC_REPO
+              value: "{{ .Values.testsuiteAssetLocation }}"
+            - name: GIT_SYNC_ONE_TIME
+              value: "true"
+            - name: GIT_SYNC_REF
+              value: "{{ .Values.testsuiteArtifactsVersion }}"
             - name: GIT_SYNC_ROOT
               value: "/git/tmp"
           securityContext:
@@ -170,6 +188,8 @@ spec:
           name: {{ include "common.fullname" . }}-lighttpd-index-configmap
           defaultMode: 0755
       - name: vnf-assets
+        emptyDir: {}
+      - name: test-assets
         emptyDir: {}
       imagePullSecrets:
       - name: "{{ include "common.namespace" . }}-docker-registry-key"

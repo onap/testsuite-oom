@@ -53,6 +53,10 @@ openStackFlavourMedium: "m1.medium"
 # VNF Asset Location - git repo with assets
 vnfAssetLocation: https://gerrit.onap.org/r/demo.git
 
+# Testuite Location - git repo with tests
+testsuiteAssetLocation: https://gerrit.onap.org/r/testsuite.git
+testsuiteArtifactsVersion: master
+
 #################  Openstack .RC Parameters ################################333
 # KEYSTONE Version 3  Required for Rocky and beyond
 # Openstack Keystone API version. Valid values are [ v2.0, v3 ]. Maps to GLOBAL_INJECTED_OPENSTACK_KEYSTONE_API_VERSION
