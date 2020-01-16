@@ -139,8 +139,8 @@ aaiPassword: "demo123456!"
 appcUsername: "appc@appc.onap.org"
 appcPassword: "demo123456!"
 # DCAE
-dcaeUsername: "console"
-dcaePassword: "ZjJkYjllMjljMTI2M2Iz"
+dcaeUsername: "dcae@dcae.onap.org"
+dcaePassword: "demo123456!"
 # DROOLS
 droolsUsername: "demo@people.osaaf.org"
 droolsPassword: "demo123456!"
