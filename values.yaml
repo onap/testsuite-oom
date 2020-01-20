@@ -237,6 +237,13 @@ service:
 
 ingress:
   enabled: false
+  service:
+    - baseaddr: "robot"
+      name: "robot"
+      port: 88
+  config:
+    ssl: "none"
+
 
 ## Persist data to a persitent volume
 persistence:
