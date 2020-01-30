@@ -50,6 +50,8 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
    echo ""
    echo "  sdc-dcae-d.robot: sdc-dcae-d"
    echo ""
+   echo "  security.robot: security"
+   echo ""
    echo "  update_onap_page.robot: UpdateWebPage"
    echo ""
    echo "  vnf-orchestration-direct-so.robot: instantiateVFWdirectso"
@@ -85,5 +87,19 @@ DISPLAY_NUM=$(($GLOBAL_BUILD_NUMBER + 90))
 
 VARIABLEFILES="-V /share/config/robot_properties.py"
 VARIABLES="-v GLOBAL_BUILD_NUMBER:$$"
+
+case $2 in
+    security)
+        if [ -z "$NODEPORTS_FILE" ]; then
+            echo "Security tests require gathering additional information on ONAP cluster."
+            echo "It is unavailable from within Robot pod."
+            echo ""
+            echo "Rerun command with \"execscript\" argument, e.g."
+            echo "$ $0 onap security execscript"
+            exit
+        fi
+        VARIABLES="${VARIABLES} -v ACTUAL_NODEPORTS_FILE:${NODEPORTS_FILE}"
+        ;;
+esac
 
 kubectl --namespace $NAMESPACE exec ${POD} -- ${ETEHOME}/runTags.sh ${VARIABLEFILES} ${VARIABLES} -d /share/logs/${OUTPUT_FOLDER} ${TAGS} --display $DISPLAY_NUM
