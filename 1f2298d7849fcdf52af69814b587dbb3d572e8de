@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b1d7e16b_19cd4a7f",
+        "filename": "demo-k8s.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-02-04T09:50:31Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "1f2298d7849fcdf52af69814b587dbb3d572e8de",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
