@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c833b01f_ae3a8c8f",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-03-05T19:40:42Z",
+      "side": 1,
+      "message": "do you know that you may have your system wide git ignore;)\ngit config --global core.excludesfile ~/dotfiles/.gitignore-system",
+      "revId": "2e664979073b9ab1fe7251c1e196d50f80f86292",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
