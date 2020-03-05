@@ -16,6 +16,24 @@
       "revId": "2e664979073b9ab1fe7251c1e196d50f80f86292",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1643b1c3_882a6312",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4405
+      },
+      "writtenOn": "2020-03-05T20:41:19Z",
+      "side": 1,
+      "message": "I did not, but I do now. Thanks.\n\nMay be a bit risky though if you overload it..",
+      "parentUuid": "c833b01f_ae3a8c8f",
+      "revId": "2e664979073b9ab1fe7251c1e196d50f80f86292",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
     }
   ]
 }
