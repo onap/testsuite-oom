@@ -203,8 +203,8 @@ GLOBAL_POMBA_CONTEXTAGGREGATOR_PORT = "9529"
 GLOBAL_MSB_SERVER_PROTOCOL = "https"
 GLOBAL_MSB_SERVER_PORT = "443"
 # message router info - everything is from the private oam network (also called onap private network)
-GLOBAL_MR_SERVER_PROTOCOL = "http"
-GLOBAL_MR_SERVER_PORT = "3904"
+GLOBAL_MR_SERVER_PROTOCOL = "https"
+GLOBAL_MR_SERVER_PORT = "3905"
 # bus controller info
 GLOBAL_BC_SERVER_PROTOCOL = "https"
 GLOBAL_BC_HTTPS_SERVER_PORT = "8443"
