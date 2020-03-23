@@ -281,8 +281,8 @@ GLOBAL_POLICY_PASSWORD = '{{ .Values.policyPassword }}'
 GLOBAL_POLICY_HEALTHCHECK_USERNAME = '{{ .Values.policyComponentUsername }}'
 GLOBAL_POLICY_HEALTHCHECK_PASSWORD = '{{ .Values.policyComponentPassword }}'
 # portal info - everything is from the private oam network (also called onap private network)
-GLOBAL_PORTAL_SERVER_PROTOCOL = "http"
-GLOBAL_PORTAL_SERVER_PORT = "8989"
+GLOBAL_PORTAL_SERVER_PROTOCOL = "https"
+GLOBAL_PORTAL_SERVER_PORT = "8443"
 GLOBAL_PORTAL_USERNAME = '{{ .Values.portalUsername }}'
 GLOBAL_PORTAL_PASSWORD = '{{ .Values.portalPassword }}'
 # sdnc info - everything is from the private oam network (also called onap private network)
