@@ -23,4 +23,9 @@ metadata:
     release: {{ include "common.release" . }}
     heritage: {{ .Release.Service }}
 data:
+{{ if .Values.config.useIngressHost }}
+{{ tpl (.Files.Glob "resources/config/eteshare_ingress/config/*").AsConfig . | indent 2 }}
+{{ else }}
 {{ tpl (.Files.Glob "resources/config/eteshare/config/*").AsConfig . | indent 2 }}
+{{ end }}
+

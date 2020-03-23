@@ -38,6 +38,8 @@ config:
 # openStackEncryptedPasswordHere should match the encrypted string used in SO and APPC and overridden per environment
   openStackEncryptedPasswordHere: "c124921a3a0efbe579782cde8227681e"
   openStackSoEncryptedPassword: "SAME_STRING_AS_SO_JAVA_ENCRYPTED_PASSWORD"
+# Testing via ingress controller
+  useIngressHost: false
 
 # Demo configuration
 # Nexus demo artifact version.  Maps to GLOBAL_INJECTED_ARTIFACTS_VERSION
@@ -218,7 +220,7 @@ resources:
 # probe configuration parameters
 liveness:
   initialDelaySeconds: 180
-  periodSeconds: 10
+  periodSeconds: 9
   # necessary to disable liveness probe when setting breakpoints
   # in debugger so K8s doesn't restart unresponsive container
   enabled: true
