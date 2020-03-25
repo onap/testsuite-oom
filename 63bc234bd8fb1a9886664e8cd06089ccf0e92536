@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "bac966d5_ab7cad9a",
+        "filename": "resources/config/eteshare_ingress/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-03-25T12:47:21Z",
+      "side": 1,
+      "message": "Nope. We don\u0027t want a ton of identical values in 2 configuration files. Please have 3 files:\n1) common part\n2) cluster IP\n3) ingress\n\nat worst you can always concatenate 1 and 2 or 3 but please don\u0027t double whole files",
+      "revId": "63bc234bd8fb1a9886664e8cd06089ccf0e92536",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": false
+    }
+  ]
+}
