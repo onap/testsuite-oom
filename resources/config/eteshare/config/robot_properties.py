@@ -148,8 +148,8 @@ GLOBAL_SDC_AUTHENTICATION = [GLOBAL_SDC_USERNAME, GLOBAL_SDC_PASSWORD]
 GLOBAL_CLAMP_SERVER_PROTOCOL = "https"
 GLOBAL_CLAMP_SERVER_PORT = "8443"
 # nbi info - everything is from the private oam network (also called onap private network)
-GLOBAL_NBI_SERVER_PROTOCOL = "http"
-GLOBAL_NBI_SERVER_PORT = "8080"
+GLOBAL_NBI_SERVER_PROTOCOL = "https"
+GLOBAL_NBI_SERVER_PORT = "8443"
 # cli info - everything is from the private oam network (also called onap private network)
 GLOBAL_CLI_SERVER_PROTOCOL = "http"
 GLOBAL_CLI_SERVER_PORT = "8080"
