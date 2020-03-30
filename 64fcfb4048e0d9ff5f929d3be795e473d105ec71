@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ccd87b95_2c772c15",
+        "filename": "values.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2020-03-30T14:27:26Z",
+      "side": 1,
+      "message": "will we have to set this in integration-override.yaml for each release ?",
+      "range": {
+        "startLine": 58,
+        "startChar": 27,
+        "endLine": 58,
+        "endChar": 33
+      },
+      "revId": "64fcfb4048e0d9ff5f929d3be795e473d105ec71",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
