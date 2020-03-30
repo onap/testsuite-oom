@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "25b2dc37_f3ea6302",
+        "filename": "values.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 247,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2020-03-30T20:42:16Z",
+      "side": 1,
+      "message": "this is probably wrong",
+      "range": {
+        "startLine": 247,
+        "startChar": 12,
+        "endLine": 247,
+        "endChar": 14
+      },
+      "revId": "57dceb8fc9caa80910cd3514deceb6daf273c657",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
