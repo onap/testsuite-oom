@@ -68,6 +68,10 @@ spec:
           readOnly: true
         - name: robot-eteshare
           mountPath: /share/config
+        - name: robot-lighttpd
+          mountPath: /etc/lighttpd
+        - name: robot-lighttpd-ssl
+          mountPath: /etc/lighttpd/ssl
         - name: robot-logs
           mountPath: /share/logs
         resources:
@@ -98,5 +102,13 @@ spec:
         configMap:
           name: {{ include "common.fullname" . }}-eteshare-configmap
           defaultMode: 0755
+      - name: robot-lighttpd
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-configmap
+          defaultMode: 0755
+      - name: robot-lighttpd-ssl
+        configMap:
+          name: {{ include "common.fullname" . }}-lighttpd-ssl-configmap
+          defaultMode: 0600
       imagePullSecrets:
       - name: "{{ include "common.namespace" . }}-docker-registry-key"
