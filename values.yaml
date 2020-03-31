@@ -35,6 +35,10 @@ debugEnabled: false
 #################################################################
 config:
 
+# for access to test logs
+  robotWebUser: "test"
+  robotWebPassword: "test"
+
 # openStackEncryptedPasswordHere should match the encrypted string used in SO and APPC and overridden per environment
   openStackEncryptedPasswordHere: "c124921a3a0efbe579782cde8227681e"
   openStackSoEncryptedPassword: "SAME_STRING_AS_SO_JAVA_ENCRYPTED_PASSWORD"
@@ -231,8 +235,8 @@ service:
   name: robot
   type: NodePort
   portName: httpd
-  externalPort: 88
-  internalPort: 88
+  externalPort: 443
+  internalPort: 443
   nodePort: "09"
 
 ingress:
@@ -240,7 +244,7 @@ ingress:
   service:
     - baseaddr: "robot"
       name: "robot"
-      port: 88
+      port: 443
   config:
     ssl: "none"
 
