@@ -48,7 +48,7 @@ GLOBAL_INJECTED_BC_IP_ADDR = 'dmaap-bc.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_MUSIC_IP_ADDR = 'music.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_NBI_IP_ADDR = 'nbi.{{include "common.namespace" .}}'
 GLOBAL_INJECTED_NETWORK = '{{ .Values.openStackPrivateNetId }}'
-GLOBAL_INJECTED_NEXUS_DOCKER_REPO = 'nexus3.onap.org:10001'
+GLOBAL_INJECTED_NEXUS_DOCKER_REPO = '{{ .Values.repository }}'
 GLOBAL_INJECTED_NEXUS_PASSWORD = 'docker'
 GLOBAL_INJECTED_NEXUS_REPO ='https://nexus.onap.org/content/sites/raw'
 GLOBAL_INJECTED_NEXUS_USERNAME = 'docker'
@@ -309,6 +309,10 @@ GLOBAL_VNFSDK_SERVER_PORT = "8703"
 
 GLOBAL_DCAE_VES_PROTOCOL = "http"
 GLOBAL_DCAE_VES_SERVER_PORT = "8080"
+GLOBAL_DCAE_VES_HTTPS_PROTOCOL = "https"
+GLOBAL_DCAE_VES_HTTPS_SERVER_PORT = "8443"
+GLOBAL_DCAE_VES_USERNAME = 'sample1'
+GLOBAL_DCAE_VES_PASSWORD = 'sample1'
 #global selenium info
 GLOBAL_PROXY_WARNING_TITLE=""
 GLOBAL_PROXY_WARNING_CONTINUE_XPATH=""
