@@ -152,7 +152,7 @@ GLOBAL_NBI_SERVER_PROTOCOL = "https"
 GLOBAL_NBI_SERVER_PORT = "8443"
 # cli info - everything is from the private oam network (also called onap private network)
 GLOBAL_CLI_SERVER_PROTOCOL = "https"
-GLOBAL_CLI_SERVER_PORT = "8443"
+GLOBAL_CLI_SERVER_PORT = "443"
 # dcae info - everything is from the private oam network (also called onap private network)
 GLOBAL_DCAE_SERVER_PROTOCOL = "http"
 GLOBAL_DCAE_HEALTH_SERVER_PORT = "80"
