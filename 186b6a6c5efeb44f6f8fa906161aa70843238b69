@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9928d39e_e3fec217",
+        "filename": "templates/_ingress_svc_hostname.tpl",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-04-14T09:19:26Z",
+      "side": 1,
+      "message": "whitespaces",
+      "revId": "186b6a6c5efeb44f6f8fa906161aa70843238b69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ae4d47e_952f5909",
+        "filename": "templates/_ingress_svc_hostname.tpl",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-04-14T09:19:26Z",
+      "side": 1,
+      "message": "please provide a proper documentation for each template",
+      "revId": "186b6a6c5efeb44f6f8fa906161aa70843238b69",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
