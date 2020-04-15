@@ -34,6 +34,175 @@ debugEnabled: false
 # Application configuration defaults.
 #################################################################
 config:
+  useIngressHost:
+      enabled: false
+      aaf_service:
+        enabled: true
+        https: true
+        hostname: aafservice
+      aai:
+        enabled: true
+        https: true
+        hostname: aai.api.sparky
+      appc:
+        enabled: true
+        https: true
+        hostname: appc.api
+      appc_cdt:
+        enabled: true
+        https: true
+        hostname: appccdt
+      clamp:
+        enabled: true
+        https: true
+      cli:
+        enabled: true
+        https: true
+      dcae_healthcheck:
+        enabled: false
+      dcae_ves_collector:
+        enabled: false
+      dcae_ves_colector_https:
+        enabled: false
+        https: true
+      dmaap_dr_prov:
+        enabled: true
+        https: true
+        hostname: dmaapdrprov
+      dmaap_dr_node:
+        enabled: true
+        https: true
+        hostname: dmaapdrnode
+      log_es:
+        enabled: false
+      log_kibana:
+        enabled: false
+      log_ls_http:
+        enabled: false
+      pomba_aaictxbuilder:
+        enabled: false
+      pomba_sdctxbuilder:
+        enabled: false
+      pomba_networkdiscoveryctxbuilder:
+        enabled: false
+      pomba_servicedecomposition:
+        enabled: false
+      pomba_sdncctxbuilder:
+        enabled: false
+      pomba_networkdiscovery:
+        enabled: false
+      pomba_validation_service:
+        enabled: false
+      pomba_kibana:
+        enabled: false
+      pomba_es:
+        enabled: false
+      pomba_contextaggregator:
+        enabled: false
+      message_router:
+        enabled: false
+        https: true
+      dmaap_bc:
+        enabled: true
+        https: true
+        hostname: dmaapbc
+      music:
+        enabled: false
+        https: true
+      nbi:
+        enabled: false
+        https: true
+      oof_has_api:
+        enabled: true
+        https: true
+      oof_osdf:
+        enabled: true
+        https: true
+        hostname: oofsdf
+      oof_cmso:
+        enabled: false
+        https: true
+      msb_iag:
+        enabled: false
+      pdp:
+        enabled: false
+      drools:
+        enabled: false
+      policy_api:
+        enabled: false
+      policy_pap:
+        enabled: false
+      policy_distribution:
+        enabled: false
+      policy_xacml_pdp:
+        enabled: false
+      policy_apex_pdp:
+        enabled: false
+      policy_distribution:
+        enabled: false
+      portal_app:
+        enabled: false
+        https: true
+        hostname: portal.api
+      sdc_be:
+        enabled: true
+        https: true
+      sdc_onboarding_be:
+        enabled: false
+        https: true
+      sdc_fe:
+        enabled: true
+        hostname: sdc.api.fe
+        https: true
+      sdc_dcae_be:
+        enabled: false
+        https: true
+      sdnc:
+        enabled: false
+        https: true
+      sdnc_portal:
+        enabled: false
+        https: true
+      so:
+        enabled: true
+        hostname: so.api
+      so_sdc_controller:
+        enabled: false
+      so_pbmn_infra:
+        enabled: false
+      so_catalog_db_adapter:
+        enabled: false
+      so_openstack_adapter:
+        enabled: false
+      so_request_db_adapter:
+        enabled: false
+      so_sdnc_adapter:
+        enabled: false
+      so_vfc_adapter:
+        enabled: false
+      so_vnfm_adapter:
+        enabled: false
+      vid:
+        enabled: false
+      refrepo:
+        enabled: true
+        https: true
+      cds_blueprints_processor_http:
+        enabled: true
+        hostname: blueprintsprocessorhttp
+      dcae_hv_ves_collector:
+        enabled: false
+      message_router_kafka:
+        enabled: false
+      inventory:
+        enabled: false
+        https: true
+      deployment-handler:
+        enabled: false
+        https: true
+      aaf_sms:
+        enabled: false
+        https: true
 
 # for access to test logs
   robotWebUser: "test"
