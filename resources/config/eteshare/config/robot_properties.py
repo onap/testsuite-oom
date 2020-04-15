@@ -74,6 +74,7 @@ GLOBAL_INJECTED_OPENSTACK_TENANT_ID_REGION_THREE = '{{ .Values.openStackTenantId
 GLOBAL_INJECTED_OPENSTACK_PROJECT_DOMAIN_REGION_THREE = '{{ .Values.openStackProjectNameRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_USER_DOMAIN_REGION_THREE = '{{ .Values.openStackDomainIdRegionThree }}'
 GLOBAL_INJECTED_OPENSTACK_OAM_NETWORK_CIDR_PREFIX = '{{ .Values.openStackOamNetworkCidrPrefix }}'
+GLOBAL_INJECTED_OPENSTACK_OAM_NETWORK_3RD_OCTET = '{{ .Values.openStackOamNetwork3rdOctet}}'
 GLOBAL_INJECTED_OPENSTACK_PUBLIC_NETWORK = '{{ .Values.openStackPublicNetworkName }}'
 GLOBAL_INJECTED_OPENSTACK_SECURITY_GROUP = '{{ .Values.openStackSecurityGroup }}'
 GLOBAL_INJECTED_OPENSTACK_PRIVATE_SUBNET_ID = "{{ .Values.openStackPrivateSubnetId }}"

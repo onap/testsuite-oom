@@ -118,6 +118,10 @@ openStackPrivateNetCidr: "10.0.0.0/8"
 # The first 2 octets of the private Openstack subnet where VNFs will be spawned.
 # Needed because sdnc preload templates hardcodes things like this 10.0.${ecompnet}.X
 openStackOamNetworkCidrPrefix: "10.0"
+# If you network allowed a /16 for the ONAP OAM then leave blank and robot will assign
+# a random variable to be able to instantiate multple vFWCL, vLB etc in your environemtn
+# if you only provided a /24 then provide the 3rd octet you use for your /24
+openStackOamNetwork3rdOctet: ""
 # VID protocol/port until Selenium issue with SSL resolved
 # https/8443 vs http/8080
 vidServerProtocol:  "https"
