@@ -249,7 +249,7 @@ service:
 ingress:
   enabled: false
   service:
-    - baseaddr: "robot"
+    - baseaddr: "robot.api"
       name: "robot"
       port: 443
   config:
