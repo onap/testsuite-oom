@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "346726f3_5e4171f2",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2020-05-01T13:33:29Z",
+      "side": 1,
+      "message": "this is a new variable for integration override as well.",
+      "range": {
+        "startLine": 114,
+        "startChar": 0,
+        "endLine": 114,
+        "endChar": 32
+      },
+      "revId": "593e0c1f497a34deb60a2df7c39b181ec0f58fe3",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
