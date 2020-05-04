@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e6173ec_33262e03",
+        "filename": "templates/_ingress_svc_hostname.tpl",
+        "patchSetId": 8
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-05-04T16:47:22Z",
+      "side": 1,
+      "message": "don\u0027t use tabs. Indent 2 spaces",
+      "revId": "382404cbe1199208285812b648174f68f0f93d41",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
