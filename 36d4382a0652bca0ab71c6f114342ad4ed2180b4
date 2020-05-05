@@ -1,0 +1,310 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e68db826_1fe044cc",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8277a216_eead227c",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0487b833_c75eabf7",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "21784a4d_a7bdac32",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 158,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6812a54c_5b280e02",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "14f4d1ad_f7291e39",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "712a3fef_63012ef3",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10639de2_2557b41d",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 172,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b946e49b_461f9ab1",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 249,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "will moved to https with https://gerrit.onap.org/r/c/oom/+/105038, don\u0027t know if used",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8ddd437_943086b4",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "will move to 8443 https://gerrit.onap.org/r/c/oom/+/105038, don\u0027t know if used",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d061be3d_edff0b62",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 287,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8158bfb2_aa0eb17f",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0fec98c5_1f3990a9",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 292,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "79b0a39f_a75d5a84",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 293,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ab9d2960_c67e6a56",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8443",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8fdcc4f_d6f98112",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 310,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "https",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22a516ba_b12bcee2",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "8703",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a8faa2ff_792aff90",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 314,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-05-05T06:42:15Z",
+      "side": 1,
+      "message": "some values (GLOBAL_DCAE_VES_HTTPS_PROTOCOL \u003d \"https\"\nGLOBAL_DCAE_VES_HTTPS_SERVER_PORT \u003d \"8443\"\nGLOBAL_DCAE_VES_USERNAME \u003d \u0027sample1\u0027\nGLOBAL_DCAE_VES_PASSWORD \u003d \u0027sample1) are missing",
+      "revId": "36d4382a0652bca0ab71c6f114342ad4ed2180b4",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
