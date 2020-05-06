@@ -250,7 +250,7 @@ ingress:
       name: "robot"
       port: 443
   config:
-    ssl: "none"
+    ssl: "redirect"
 
 
 ## Persist data to a persitent volume
