@@ -18,6 +18,8 @@
 global: # global defaults
   nodePortPrefix: 302
   ubuntuInitRepository: registry.hub.docker.com
+  tlsRepository: nexus3.onap.org:10001
+  dcaeTlsImage: onap/org.onap.dcaegen2.deployments.tls-init-container:2.1.0
   persistence: {}
 
 # application image

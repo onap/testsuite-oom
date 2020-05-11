@@ -42,6 +42,20 @@ spec:
         - "aai.ui.simpledemo.onap.org"
         - "cli.api.simpledemo.onap.org"
         - "so-monitoring"
+      initContainers:
+      - name: init-tls
+        env:
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+        image: {{ .Values.global.tlsRepository }}/{{ .Values.global.dcaeTlsImage }}
+        imagePullPolicy: {{ .Values.global.pullPolicy | default .Values.pullPolicy }}
+        resources: {}
+        volumeMounts:
+          - mountPath: /opt/app/osaaf
+            name: dcae-tls-certs
       containers:
       - name: {{ include "common.name" . }}
         image: "{{ include "common.repository" . }}/{{ .Values.image }}"
@@ -74,6 +88,8 @@ spec:
           mountPath: /etc/lighttpd/ssl
         - name: robot-logs
           mountPath: /share/logs
+        - name: dcae-tls-certs
+          mountPath: /share/certs/dcae-tls-certs
         resources:
 {{ include "common.resources" . }}
       {{- if .Values.nodeSelector }}
@@ -110,5 +126,7 @@ spec:
         configMap:
           name: {{ include "common.fullname" . }}-lighttpd-ssl-configmap
           defaultMode: 0600
+      - name: dcae-tls-certs
+        emptyDir: {}
       imagePullSecrets:
       - name: "{{ include "common.namespace" . }}-docker-registry-key"
