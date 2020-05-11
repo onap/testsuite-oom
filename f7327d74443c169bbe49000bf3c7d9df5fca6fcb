@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8036b558_d3b1d42d",
+        "filename": "templates/deployment.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-05-11T18:12:34Z",
+      "side": 1,
+      "message": "Any reason to call it dcae-init-tls?\nI understand, we wanna use this mainly in use-cases, where DCAE communications kicks-in, but I am not sure, if we need to call it dcae-init-tls (might be misleading).",
+      "range": {
+        "startLine": 46,
+        "startChar": 14,
+        "endLine": 46,
+        "endChar": 27
+      },
+      "revId": "f7327d74443c169bbe49000bf3c7d9df5fca6fcb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "118c01f8_f5d5d8e7",
+        "filename": "templates/deployment.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-05-11T18:12:34Z",
+      "side": 1,
+      "message": "dcae-tls-certs?",
+      "range": {
+        "startLine": 58,
+        "startChar": 18,
+        "endLine": 58,
+        "endChar": 31
+      },
+      "revId": "f7327d74443c169bbe49000bf3c7d9df5fca6fcb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d1be9f27_c7ebec49",
+        "filename": "templates/deployment.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-05-11T18:12:34Z",
+      "side": 1,
+      "message": "dcae-tls-certs?",
+      "range": {
+        "startLine": 91,
+        "startChar": 16,
+        "endLine": 91,
+        "endChar": 29
+      },
+      "revId": "f7327d74443c169bbe49000bf3c7d9df5fca6fcb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fe066591_bdfdf7a0",
+        "filename": "templates/deployment.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-05-11T18:12:34Z",
+      "side": 1,
+      "message": "dcae-tls-certs?",
+      "range": {
+        "startLine": 129,
+        "startChar": 14,
+        "endLine": 129,
+        "endChar": 27
+      },
+      "revId": "f7327d74443c169bbe49000bf3c7d9df5fca6fcb",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
