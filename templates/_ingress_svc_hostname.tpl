@@ -28,16 +28,24 @@
 {{- define "robot.ingress.svchost._isen" -}}
   {{- $key := .key -}}
   {{- $master := .parent.Values.config.useIngressHost -}}
-  {{- if hasKey $master $key -}}
-    {{- $en_parent := (index $master $key) -}}
-    {{- if hasKey $en_parent "enabled" -}}
-      {{- default "" (index $en_parent "enabled") -}}
-    {{- else -}}
-      {{- "" -}}
-    {{- end -}}
+  {{- if hasKey $master "enabled" -}}
+    {{- if (index $master "enabled") -}}
+      {{- if hasKey $master $key -}}
+        {{- $en_parent := (index $master $key) -}}
+        {{- if hasKey $en_parent "enabled" -}}
+          {{- default "" (index $en_parent "enabled") -}}
+        {{- else -}}
+          {{- "" -}}
+        {{- end -}}
+      {{- else -}}
+        {{- "" -}}
+      {{- end -}}
   {{- else -}}
     {{- "" -}}
   {{- end -}}
+ {{- else -}}
+   {{- "" -}}
+ {{- end -}}
 {{- end -}}
 
 {{/*
@@ -111,7 +119,7 @@
     {{- if .root.Values.global.ingress -}}
     {{- if .root.Values.global.ingress.virtualhost -}}
       {{- $domain := .root.Values.global.ingress.virtualhost.baseurl -}}
-      {{- $ihostname := default $hostname (include "robot.ingress.svchost._inghost") -}}
+      {{- $ihostname := default $hostname (include "robot.ingress.svchost._inghost" (dict "parent" .root "key" $tplhname)) -}}
       {{- printf "%s.%s" $ihostname $domain -}}
     {{- end -}}
     {{- end -}}
