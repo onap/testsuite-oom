@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "728719e4_956d8a00",
+        "filename": "demo-k8s.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2020-05-12T13:58:06Z",
+      "side": 0,
+      "message": "agree looks like that vriable got renamed in demo.robot \n   Execute Heatbridge   ${HB_STACK}   ${HB_VNF}    ${HB_SERVICE}    ${HB_IPV4_OAM_ADDRESS}",
+      "range": {
+        "startLine": 198,
+        "startChar": 28,
+        "endLine": 198,
+        "endChar": 50
+      },
+      "revId": "1bc31c7d76408bdf2267bf72bf3b1b1e18e2367f",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
