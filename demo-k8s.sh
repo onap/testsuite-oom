@@ -1,6 +1,7 @@
 #!/bin/bash
 # Copyright (C) 2018 Amdocs, Bell Canada
 # Modifications Copyright (C) 2019 Samsung
+# Modifications Copyright (C) 2020 Nokia
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,8 +52,8 @@ function usage
 	echo "       demo-k8s.sh <namespace> deleteVNF <module_name from instantiateVFW>"
 	echo "               - Delete the module created by instantiateVFW"
 	echo " "
-	echo "       demo-k8s.sh <namespace> heatbridge <stack_name> <service_instance_id> <service> <oam-ip-address>"
-	echo "               - Run heatbridge against the stack for the given service instance and service"
+	echo "       demo-k8s.sh <namespace> heatbridge <stack_name> <vnf_type> <service_type> <oam-ip-address_env_parameter>"
+	echo "               - Run heatbridge against the stack for the given vnf type and service type"
 	echo " "
 	echo "       demo-k8s.sh <namespace> vfwclosedloop <pgn-ip-address>"
         echo "               - vFWCL: Sets the packet generator to high and low rates, and checks whether the policy "
@@ -190,12 +191,12 @@ do
 			TAG="heatbridge"
 			shift
 			if [ $# -ne 4 ];then
-				echo "Usage: demo-k8s.sh <namespace> heatbridge <stack_name> <service_instance_id> <service> <oam-ip-address>"
+				echo "Usage: demo-k8s.sh <namespace> heatbridge <stack_name> <vnf_type> <service_type> <oam-ip-address_env_parameter>"
 				exit
 			fi
 			VARIABLES="$VARIABLES -v HB_STACK:$1"
 			shift
-			VARIABLES="$VARIABLES -v HB_SERVICE_INSTANCE_ID:$1"
+			VARIABLES="$VARIABLES -v HB_VNF:$1"
 			shift
 			VARIABLES="$VARIABLES -v HB_SERVICE:$1"
 			shift
