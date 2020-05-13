@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa3752cf_dd11a681",
+        "filename": "demo-k8s.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 5597
+      },
+      "writtenOn": "2020-05-13T06:58:44Z",
+      "side": 1,
+      "message": "IS this description still correct (assuming we have here new parameter \"HB_VNF\")?",
+      "range": {
+        "startLine": 193,
+        "startChar": 10,
+        "endLine": 193,
+        "endChar": 114
+      },
+      "revId": "2dbfb2233d18517fb68351d94cde4ad4bbfbebfc",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
