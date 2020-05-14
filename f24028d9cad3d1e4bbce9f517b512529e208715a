@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "a58a3836_24d74019",
+        "filename": "resources/config/eteshare/config/robot_properties.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 4481
+      },
+      "writtenOn": "2020-05-14T12:18:19Z",
+      "side": 1,
+      "message": "can we switch this to \u0027{{include \"common.repository\" .}}\u0027. Why to hard code repository. Currently 5gbulkpm test case uses blueprint preloaded by bootstrap to inventory.\nIf some company while have own proxy nexus with different fqdn then 5gbulkpm test mechanism will replace nexus repo using inputs and this variable. I put this comment as there was merge conflict with my change request https://gerrit.onap.org/r/c/testsuite/oom/+/107675",
+      "range": {
+        "startLine": 51,
+        "startChar": 37,
+        "endLine": 51,
+        "endChar": 59
+      },
+      "revId": "f24028d9cad3d1e4bbce9f517b512529e208715a",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "7e2f0d1f_c11116ee",
         "filename": "values.yaml",
         "patchSetId": 5
