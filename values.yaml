@@ -181,7 +181,8 @@ config:
       so_vfc_adapter:
         enabled: false
       so_vnfm_adapter:
-        enabled: false
+        enabled: true
+        https: true
       vid:
         enabled: false
       refrepo:
