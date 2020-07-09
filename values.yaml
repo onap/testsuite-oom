@@ -110,15 +110,16 @@ config:
         enabled: false
         https: true
       nbi:
-        enabled: false
+        enabled: true
         https: true
       oof_has_api:
         enabled: true
         https: true
+        hostname: oof-has-api.onap
       oof_osdf:
         enabled: true
         https: true
-        hostname: oofsdf
+        hostname: oofosdf
       oof_cmso:
         enabled: false
         https: true
@@ -141,7 +142,7 @@ config:
       policy_distribution:
         enabled: false
       portal_app:
-        enabled: false
+        enabled: true
         https: true
         hostname: portal.api
       sdc_be:
@@ -181,9 +182,11 @@ config:
       so_vfc_adapter:
         enabled: false
       so_vnfm_adapter:
-        enabled: false
+        enabled: true
+        https: true
       vid:
-        enabled: false
+        enabled: true
+        hostname: vid.api
       refrepo:
         enabled: true
         https: true

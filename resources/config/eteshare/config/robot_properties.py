@@ -169,7 +169,7 @@ GLOBAL_DCAE_HVVES_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "
 GLOBAL_DMAAP_DR_PROV_SERVER_PROTOCOL = "https"
 GLOBAL_DMAAP_DR_PROV_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "dmaap-dr-prov" "port" 443) }}'
 GLOBAL_DMAAP_DR_NODE_SERVER_PROTOCOL = "https"
-GLOBAL_DMAAP_DR_NODE_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "dmapp-dr-node" "port" 8443) }}'
+GLOBAL_DMAAP_DR_NODE_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "dmaap-dr-node" "port" 8443) }}'
 # dmaap message router info
 GLOBAL_DMAAP_MESSAGE_ROUTER_SERVER_NAME = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "message-router") }}'
 GLOBAL_DMAAP_MESSAGE_ROUTER_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "message-router" "port" 3904) }}'
@@ -332,7 +332,7 @@ GLOBAL_TOSCA_ONBOARDING_PACKAGES_FOLDER = "/var/opt/ONAP/demo/tosca"
 
 # cds info - everything is from the private oam network (also called onap private network)
 GLOBAL_CCSDK_CDS_SERVER_PROTOCOL = "http"
-GLOBAL_CCSDK_CDS_HEALTH_SERVER_PORT = "8080"
+GLOBAL_CCSDK_CDS_HEALTH_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "cds-blueprints-processor-http" "port" 8080) }}'
 GLOBAL_CCSDK_CDS_USERNAME = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_PASSWORD = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_AUTHENTICATION = [GLOBAL_CCSDK_CDS_USERNAME, GLOBAL_CCSDK_CDS_PASSWORD]
