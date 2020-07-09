@@ -332,7 +332,7 @@ GLOBAL_TOSCA_ONBOARDING_PACKAGES_FOLDER = "/var/opt/ONAP/demo/tosca"
 
 # cds info - everything is from the private oam network (also called onap private network)
 GLOBAL_CCSDK_CDS_SERVER_PROTOCOL = "http"
-GLOBAL_CCSDK_CDS_HEALTH_SERVER_PORT = "8080"
+GLOBAL_CCSDK_CDS_HEALTH_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "cds-blueprints-processor-http" "port" 8080) }}'
 GLOBAL_CCSDK_CDS_USERNAME = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_PASSWORD = 'ccsdkapps'
 GLOBAL_CCSDK_CDS_AUTHENTICATION = [GLOBAL_CCSDK_CDS_USERNAME, GLOBAL_CCSDK_CDS_PASSWORD]

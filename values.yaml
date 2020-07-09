@@ -182,6 +182,7 @@ config:
         enabled: false
       so_vnfm_adapter:
         enabled: false
+        https: true
       vid:
         enabled: false
       refrepo:
