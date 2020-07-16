@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f03f7244_a8860d7a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 4965
+      },
+      "writtenOn": "2020-07-16T15:04:21Z",
+      "side": 1,
+      "message": "It\u0027s so beautiful when we complain on all ONAP PTL who submit OOM review to put some meaningful descrition in the commit message and then we go to other project and we put nothing in it :D",
+      "revId": "d0d855c2e642b2f41fbe89ca382f4e8aa8a56626",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
+    }
+  ]
+}
