@@ -16,6 +16,24 @@
       "revId": "d0d855c2e642b2f41fbe89ca382f4e8aa8a56626",
       "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4efcc715_a28dcd5d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2319
+      },
+      "writtenOn": "2020-07-16T15:09:24Z",
+      "side": 1,
+      "message": "😎\nshameless is my middle name :P",
+      "parentUuid": "f03f7244_a8860d7a",
+      "revId": "d0d855c2e642b2f41fbe89ca382f4e8aa8a56626",
+      "serverId": "14b4e41f-c4e3-4fb9-9955-6a9b5656895a",
+      "unresolved": true
     }
   ]
 }
