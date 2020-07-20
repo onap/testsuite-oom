@@ -1,0 +1,10 @@
+Code-Review+2: Daniel Rose <dr695h@att.com>
+Code-Review+1: Krzysztof Opasiak <k.opasiak@samsung.com>
+Code-Review+1: Sylvain Desbureaux <sylvain.desbureaux@orange.com>
+Code-Review+1: Krzysztof Kuzmicki <krzysztof.kuzmicki@nokia.com>
+Verified+1: Marcin Przybysz <marcin.przybysz@nokia.com>
+Submitted-by: Marcin Przybysz <marcin.przybysz@nokia.com>
+Submitted-at: Mon, 20 Jul 2020 08:52:46 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/testsuite/oom/+/110062
+Project: testsuite/oom
+Branch: refs/heads/master
