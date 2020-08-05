@@ -1,4 +1,5 @@
 # UUID                                                                        	Group Name
 #
+762c5255bf692d93e9e3d971c49a01368f55e51a                                      	saml/onap-gerrit-testsuite-oom-committers
 daebbf523be390041a1a9c0e340a6d833aae5043                                      	GitHub Replication
 ldap:cn=onap-gerrit-testsuite-oom-committers,ou=Groups,dc=freestandards,dc=org	ldap/onap-gerrit-testsuite-oom-committers
