@@ -1,4 +1,5 @@
 # Copyright (c) 2018 Amdocs, Bell Canada, and others
+# Modifications Copyright © 2020 AT&T Intellectual Property
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -80,7 +81,7 @@ GLOBAL_INJECTED_OPENSTACK_SECURITY_GROUP = '{{ .Values.openStackSecurityGroup }}
 GLOBAL_INJECTED_OPENSTACK_PRIVATE_SUBNET_ID = "{{ .Values.openStackPrivateSubnetId }}"
 GLOBAL_INJECTED_OPENSTACK_PRIVATE_NET_CIDR = "{{ .Values.openStackPrivateNetCidr }}"
 GLOBAL_INJECTED_POLICY_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "pdp") }}'
-GLOBAL_INJECTED_POLICY_DROOLS_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "drools") }}'
+GLOBAL_INJECTED_POLICY_DROOLS_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "policy-drools-pdp") }}'
 GLOBAL_INJECTED_PORTAL_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "portal-app") }}'
 GLOBAL_INJECTED_POLICY_API_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "policy-api") }}'
 GLOBAL_INJECTED_POLICY_PAP_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "policy-pap") }}'
@@ -179,7 +180,7 @@ GLOBAL_DMAAP_KAFKA_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . 
 GLOBAL_DMAAP_KAFKA_JAAS_USERNAME = '{{ .Values.kafkaJaasUsername }}'
 GLOBAL_DMAAP_KAFKA_JAAS_PASSWORD = '{{ .Values.kafkaJaasPassword }}'
 # DROOL server port and credentials
-GLOBAL_DROOLS_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "drools" "port" 9696) }}'
+GLOBAL_DROOLS_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "policy-drools-pdp" "port" 9696) }}'
 GLOBAL_DROOLS_USERNAME = '{{ .Values.droolsUsername }}'
 GLOBAL_DROOLS_PASSWORD = '{{ .Values.droolsPassword }}'
 GLOBAL_DROOLS_AUTHENTICATION = [GLOBAL_DROOLS_USERNAME, GLOBAL_DROOLS_PASSWORD]
