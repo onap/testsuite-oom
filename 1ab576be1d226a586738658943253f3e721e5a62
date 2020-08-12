@@ -1,0 +1,11 @@
+Code-Review+1: Ram Krishna Verma <ram_krishna.verma@bell.ca>
+Code-Review+1: Takamune Cho <takamune.cho@att.com>
+Code-Review+1: Pamela Dragosh <pdragosh@research.att.com>
+Code-Review+1: Jim Hahn <jrh3@att.com>
+Code-Review+2: Morgan Richomme <morgan.richomme@orange.com>
+Verified+1: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-by: Morgan Richomme <morgan.richomme@orange.com>
+Submitted-at: Wed, 12 Aug 2020 08:47:09 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/testsuite/oom/+/111070
+Project: testsuite/oom
+Branch: refs/heads/master
