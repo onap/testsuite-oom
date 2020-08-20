@@ -1,5 +1,6 @@
 # Copyright (c) 2018 Amdocs, Bell Canada, and others
-# Modifications Copyright © 2020 AT&T Intellectual Property
+# Modifications Copyright (c) 2020 AT&T Intellectual Property
+# Modifications Copyright (c) 2020 NOKIA Intellectual Property
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
