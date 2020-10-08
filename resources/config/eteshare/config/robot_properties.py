@@ -110,6 +110,7 @@ GLOBAL_INJECTED_SO_REQDB_IP_ADDR = '{{include "robot.ingress.svchost" (dict "roo
 GLOBAL_INJECTED_SO_SDNC_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "so-sdnc-adapter") }}'
 GLOBAL_INJECTED_SO_VFC_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "so-vfc-adapter") }}'
 GLOBAL_INJECTED_SO_VNFM_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "so-vnfm-adapter") }}'
+GLOBAL_INJECTED_SO_NSSMF_IP_ADDR = '{{include "robot.ingress.svchost" (dict "root" . "hostname" "so-nssmf-adapter") }}'
 GLOBAL_INJECTED_UBUNTU_1404_IMAGE = '{{ .Values.ubuntu14Image }}'
 GLOBAL_INJECTED_UBUNTU_1604_IMAGE = '{{ .Values.ubuntu16Image }}'
 GLOBAL_INJECTED_VM_IMAGE_NAME = '{{ .Values.ubuntu14Image }}'
@@ -232,6 +233,7 @@ GLOBAL_SO_REQDB_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "ho
 GLOBAL_SO_SDNC_SERVER_PORT =  '{{include "robot.ingress.port" (dict "root" . "hostname" "so-sdnc-adapter" "port" 8086) }}'
 GLOBAL_SO_VFC_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "so-vfc-adapter" "port" 8084) }}'
 GLOBAL_SO_VNFM_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "so-vnfm-adapter" "port" 9092) }}'
+GLOBAL_SO_NSSMF_SERVER_PORT = '{{include "robot.ingress.port" (dict "root" . "hostname" "so-nssmf-adapter" "port" 8088) }}'
 GLOBAL_SO_USERNAME = '{{ .Values.soUsername }}'
 GLOBAL_SO_CATDB_USERNAME = '{{ .Values.soCatdbUsername }}'
 # robot uses SO_PASSWORD for both SO and CATDB
@@ -246,6 +248,7 @@ GLOBAL_SO_REQDB_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_REQDB_IP_ADDR + ':' + 
 GLOBAL_SO_SDNC_ENDPOINT =  'http://' + GLOBAL_INJECTED_SO_SDNC_IP_ADDR + ':' + GLOBAL_SO_SDNC_SERVER_PORT
 GLOBAL_SO_VFC_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_VFC_IP_ADDR + ':' + GLOBAL_SO_VFC_SERVER_PORT
 GLOBAL_SO_VNFM_ENDPOINT = 'https://' + GLOBAL_INJECTED_SO_VNFM_IP_ADDR + ':' + GLOBAL_SO_VNFM_SERVER_PORT
+GLOBAL_SO_NSSMF_ENDPOINT = 'https://' + GLOBAL_INJECTED_SO_NSSMF_IP_ADDR + ':' + GLOBAL_SO_NSSMF_SERVER_PORT
 #GLOBAL_SO_VNFM_ENDPOINT = 'http://' + GLOBAL_INJECTED_SO_VNFM_IP_ADDR + ':' + GLOBAL_SO_VNFM_SERVER_PORT
 # music info - everything is from the private oam network (also called onap private network)
 GLOBAL_MUSIC_SERVER_PROTOCOL = "https"
