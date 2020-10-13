@@ -182,6 +182,8 @@ config:
         enabled: false
       so_vnfm_adapter:
         enabled: false
+      so_nssmf_adapter:
+        enabled: false
       vid:
         enabled: false
       refrepo:
