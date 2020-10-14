@@ -113,6 +113,10 @@ do
 			TAG="InitDemo"
 			shift
 			;;
+	    vescollector)
+			TAG="vescollector"
+			shift
+			;;
         distribute_vcpe)
 			TAG="distributeVCPE"
 			shift
