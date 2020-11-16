@@ -214,7 +214,8 @@ config:
 
 # Demo configuration
 # Nexus demo artifact version.  Maps to GLOBAL_INJECTED_ARTIFACTS_VERSION
-demoArtifactsVersion: "1.4.0"
+#    1.6.0 Frankfurt change or override for your release to match demo:vnfs/vFW/scripts/pom.xml version
+demoArtifactsVersion: "1.7.0"
 # Nexus demo artifact URL.
 demoArtifactsRepoUrl: "https://nexus.onap.org/content/repositories/releases"
 # Openstack medium sized flavour name.  Maps GLOBAL_INJECTED_VM_FLAVOR
@@ -277,7 +278,8 @@ ubuntu16Image: "Ubuntu_16_xenial"
 danosImage: "danos-ves-image"
 danosFlavor: "danos"
 # GLOBAL_INJECTED_SCRIPT_VERSION.  Maps to GLOBAL_INJECTED_SCRIPT_VERSION
-scriptVersion: "1.4.0"
+#    1.6.0 Frankfurt change or override for your release to match demo:vnfs/vFW/scripts/pom.xml version
+scriptVersion: "1.7.0"
 # Openstack network to which VNFs will bind their primary (first) interface.  Maps to GLOBAL_INJECTED_NETWORK
 openStackPrivateNetId: "e8f51956-00dd-4425-af36-045716781ffc"
 # Openstack security group for instantiating VNFs
