@@ -52,9 +52,6 @@ function usage
 	echo "       demo-k8s.sh <namespace> deleteVNF <module_name from instantiateVFW>"
 	echo "               - Delete the module created by instantiateVFW"
 	echo " "
-	echo "       demo-k8s.sh <namespace> heatbridge <stack_name> <vnf_type> <service_type> <oam-ip-address_env_parameter>"
-	echo "               - Run heatbridge against the stack for the given vnf type and service type"
-	echo " "
 	echo "       demo-k8s.sh <namespace> vfwclosedloop <pgn-ip-address>"
         echo "               - vFWCL: Sets the packet generator to high and low rates, and checks whether the policy "
         echo "                 kicks in to modulate the rates back to medium"
@@ -183,28 +180,7 @@ do
 				exit
 			fi
 			VARFILE=$1.py
-			if [ -e /opt/eteshare/${VARFILE} ]; then
-				VARIABLES="$VARIABLES -V /share/${VARFILE}"
-			else
-				echo "Cache file ${VARFILE} is not found"
-				exit
-			fi
-			shift
-			;;
-    	heatbridge)
-			TAG="heatbridge"
-			shift
-			if [ $# -ne 4 ];then
-				echo "Usage: demo-k8s.sh <namespace> heatbridge <stack_name> <vnf_type> <service_type> <oam-ip-address_env_parameter>"
-				exit
-			fi
-			VARIABLES="$VARIABLES -v HB_STACK:$1"
-			shift
-			VARIABLES="$VARIABLES -v HB_VNF:$1"
-			shift
-			VARIABLES="$VARIABLES -v HB_VNF:$1 -v HB_SERVICE:$1"
-			shift
-			VARIABLES="$VARIABLES -v HB_IPV4_OAM_ADDRESS:$1"
+			VARIABLES="$VARIABLES -V /share/${VARFILE}"
 			shift
 			;;
     	cds)
