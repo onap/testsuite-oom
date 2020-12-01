@@ -28,7 +28,7 @@ if [ "$1" == "" ] || [ "$2" == "" ]; then
    echo "  clamp.robot: clamp"
    echo ""
    echo "  demo.robot: InitDemo, InitCustomer, APPCCDTPreloadDemo, APPCMountPointDemo, DistributeDemoVFWDT, DistributeVFWNG,"
-   echo "              InitDistribution, PreloadDemo, deleteVNF, heatbridge, instantiateDemoVFWCL, instantiateVFW,    "
+   echo "              InitDistribution, PreloadDemo, deleteVNF, instantiateDemoVFWCL, instantiateVFW,    "
    echo "              instantiateVFWCL, instantiateVFWDT, instantiateVFWCLDN"
    echo ""
    echo "  health-check.robot: health, core, small, medium, 3rdparty, api, datarouter, externalapi, health-aaf, health-aai, health-appc,"
