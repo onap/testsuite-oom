@@ -1,0 +1,7 @@
+Verified+1: ONAP Jobbuilder <onap-jobbuilder@jenkins.onap.org>
+Code-Review+2: Bartek Grzybowski <b.grzybowski@partner.samsung.com>
+Submitted-by: Lukasz Rajewski <lukasz.rajewski@orange.com>
+Submitted-at: Mon, 14 Jun 2021 13:13:28 +0000
+Reviewed-on: https://gerrit.onap.org/r/c/testsuite/oom/+/121838
+Project: testsuite/oom
+Branch: refs/heads/master
